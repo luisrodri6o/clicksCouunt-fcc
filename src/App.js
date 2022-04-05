@@ -2,16 +2,16 @@ import "./App.css";
 import freeCodeCampLogo from "./images/freecodecamp-logo.png";
 import Button from "./components/button";
 import Count from "./components/count";
-import { useStates } from "react";
+import { useState } from "react";
 
 function App() {
-  const [clicks, setclicks] = useState(0);
+  const [click, setClick] = useState(0);
 
   const clickCount = () => {
-    setclicks(clicks + 1);
+    setClick(click + 1);
   };
   const ressetCount = () => {
-    setclicks(0);
+    setClick(0);
   };
   return (
     <div className='App'>
@@ -19,7 +19,7 @@ function App() {
         <img alt='freecodecamp-logo' src={freeCodeCampLogo} />
       </div>
       <div className='main-container'>
-        <Count clicks={clicks} />
+        <Count clicks={click} />
         <Button text='click' ifclicksbutton={true} driver={clickCount} />
         <Button text='reset' ifclicksbutton={false} driver={ressetCount} />
       </div>
