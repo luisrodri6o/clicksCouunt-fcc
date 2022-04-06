@@ -23,6 +23,11 @@ function App() {
         <Button text='click' ifclicksbutton={true} driver={clickCount} />
         <Button text='reset' ifclicksbutton={false} driver={ressetCount} />
       </div>
+      <footer>
+        <a target='_blank' href='https://github.com/luisrodri6o'>
+          luisrodri60
+        </a>
+      </footer>
     </div>
   );
 }
